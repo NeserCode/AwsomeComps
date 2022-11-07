@@ -1,6 +1,18 @@
+<script lang="ts" setup>
+import appHeader from "@framework/appHeader.vue"
+import appFooter from "@framework/appFooter.vue"
+</script>
+
 <template>
 	<div class="app-wrapper">
-		<router-link to="/">Home</router-link>
+		<app-header />
 		<router-view />
+		<app-footer />
 	</div>
 </template>
+
+<style lang="postcss" scoped>
+.app-wrapper {
+	@apply w-full h-full flex flex-col;
+}
+</style>
